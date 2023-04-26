@@ -1,15 +1,25 @@
-# breezewiki-quay
+# breezewiki-docker
 
-A [BreezeWiki](https://gitdab.com/cadence/breezewiki) image, on Quay.
+An alternative frontend for Fandom.
 
-[Quay page](https://quay.io/repository/pussthecatorg/breezewiki) | [GitHub page](https://github.com/PussTheCat-org/docker-breezewiki-quay)
-
-This image mostly exist for the [PussTheCat.org](https://pussthecat.org/) [instance](https://breezewiki.pussthecat.org/), but others are free to use it.
+This is my docker configurations and anyone else can use as a guidance. We need more people to self-host as the world is going to shit!
 
 ## Usage:
 
-- Download (or copy the content of) the `docker-compose.yml` 
-- Download (or copy the content of) the config.ini from this repository
-- Customize the config.ini file how you want (following https://docs.breezewiki.com/Configuration.html )
-- Move both files to the folder you want
-- `docker-compose up -d`
+1. Buy [Hetzner.com](https://hetzner.com) it's 100% renewal hardware and you get affordable dedicated servers, and you also help save the world.
+
+2. Get [Cloudflare](https://cloudflare.com) it's carbon renewal and you help save the world.
+
+2. ```apt install git```
+
+3. ```git clone https://github.com/WhateverItWorks/breezewiki-docker.git breeze```
+
+4. ```nano config.ini (the settings that im using should be recommended for you, but you can change it if you want)```
+
+5. ```nano docker-compose.yml (the settings that im using should be recommended for you, but you can change it if you want)```
+
+6. ```docker-compose up -d```
+
+
+
+```http://localhost:10416```
