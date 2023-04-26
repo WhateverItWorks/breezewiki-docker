@@ -1,3 +1,5 @@
+version: '3'
+
 services:
 
   breezewiki:
@@ -5,6 +7,6 @@ services:
     image: quay.io/pussthecatorg/breezewiki:latest
     restart: unless-stopped
     ports:
-      - "127.0.0.1:10416:10416" # Replace with "10416:10416" if you don't use a reverse proxy
+      - "10416:10416"
     volumes:
       - "./config.ini:/app/config.ini"
