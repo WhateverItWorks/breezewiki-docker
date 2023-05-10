@@ -2,7 +2,7 @@
 
 An alternative frontend for Fandom.
 
-This is my docker configurations and anyone else can use as a guidance. We need more people to self-host as the world is going to shit!
+
 
 ## Usage:
 
