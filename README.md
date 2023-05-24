@@ -18,7 +18,7 @@ An alternative frontend for Fandom.
 
 5. ```nano docker-compose.yml (the settings that im using should be recommended for you, but you can change it if you want)```
 
-6. ```docker-compose up -d```
+6. ```docker-compose up -d --build```
 
 
 
