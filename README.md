@@ -12,7 +12,7 @@ An alternative frontend for Fandom.
 
 2. ```apt install git```
 
-3. ```git clone https://github.com/WhateverItWorks/breezewiki-docker.git breeze```
+3. ```git clone https://github.com/WhateverItWorks/my-breezewiki-docker-compose.git breeze```
 
 4. ```nano config.ini (the settings that im using should be recommended for you, but you can change it if you want)```
 
