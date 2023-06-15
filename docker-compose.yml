@@ -3,6 +3,7 @@ version: '3.7'
 services:
   breezewiki:
     build: .
+    #image: quay.io/pussthecatorg/breezewiki:latest
     container_name: breezewiki
     hostname: breezewiki
     restart: always
