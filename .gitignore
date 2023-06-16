@@ -1,0 +1,18 @@
+# Emacs crud files
+*~
+.#*
+\#*#
+
+# Experiments
+*.experiment
+*.typedattempt
+*.untyped
+
+# Compiled
+compiled
+/breezewiki
+/dist
+/breezewiki-dist
+
+# Personal
+/config.ini
