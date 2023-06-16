@@ -47,48 +47,6 @@
     (values theme
             (html->xexp (file->string (build-path path-static (format "icon-theme-~a.svg" theme)) #:mode 'binary)))))
 
-(define (application-footer source-url #:license [license-in #f])
-  (define license (or license-in license-default))
-  `(footer (@ (class "custom-footer"))
-           (div (@ (class ,(if source-url "custom-footer__cols" "internal-footer")))
-                (div (p
-                      (img (@ (class "my-logo") (src ,(get-static-url "breezewiki.svg")))))
-                     (p
-                      (a (@ (href "https://gitdab.com/cadence/breezewiki"))
-                         ,(format "~a source code" (config-get 'application_name))))
-                     (p
-                      (a (@ (href "https://docs.breezewiki.com"))
-                         "Documentation and more information"))
-                     (p
-                      (a (@ (href "https://lists.sr.ht/~cadence/breezewiki-discuss"))
-                         "Chat / Bug reports / Feature requests"))
-                     ,(if (config-member? 'promotions::indie_wiki_buddy "footer")
-                          `(p
-                            (a (@ (href "https://getindie.wiki/"))
-                               "Get Indie Wiki Buddy browser extension - be redirected to BreezeWiki every time!"))
-                          "")
-                     ,(if (config-true? 'instance_is_official)
-                          `(p ,(format "This instance is run by the ~a developer, " (config-get 'application_name))
-                              (a (@ (href "https://cadence.moe/contact"))
-                                 "Cadence")
-                              ". Proudly hosted by "
-                              (a (@ (href "http://alphamethyl.barr0w.net"))
-                                 "Barrow Network Solutions" (sup "XD"))
-                              ".")
-                          `(p
-                            ,(format "This unofficial instance is based off the ~a source code, but is not controlled by the code developer." (config-get 'application_name)))))
-                ,(if source-url
-                     `(div (p "This page displays proxied content from "
-                              (a (@ (href ,source-url) (rel "nofollow noreferrer")) ,source-url)
-                              ,(format ". Text content is available under the ~a license, " (license^-text license))
-                              (a (@ (href ,(license^-url license)) (rel "nofollow")) "see license info.")
-                              " Media files may have different copying restrictions.")
-                           (p ,(format "Fandom is a trademark of Fandom, Inc. ~a is not affiliated with Fandom." (config-get 'application_name))))
-                     `(div (p "Text content on wikis run by Fandom is available under the Creative Commons Attribution-Share Alike License 3.0 (Unported), "
-                              (a (@ (href "https://www.fandom.com/licensing") (rel "nofollow")) "see license info.")
-                              " Media files and official Fandom documents have different copying restrictions.")
-                           (p ,(format "Fandom is a trademark of Fandom, Inc. ~a is not affiliated with Fandom." (config-get 'application_name))))))))
-
 ;; generate a notice with a link if a fandom wiki has a replacement as part of NIWA or similar
 ;; if the wiki has no replacement, display nothing
 (define (extwiki-notice wikiname title)
